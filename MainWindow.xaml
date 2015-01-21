@@ -1,0 +1,125 @@
+﻿<Window x:Class="Wpf_pdf_3.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Konverter" Height="1200" Width="856" Loaded="Window_Loaded" WindowState="Maximized">
+    <ScrollViewer>
+    <Grid>
+        <Button Content="Konvertiraj" FontSize="16" Height="43" HorizontalAlignment="Left" Margin="254,129,0,0" Name="button1" VerticalAlignment="Top" Width="144" Click="button1_Click" />
+        <TextBox Text="Transformer data:" Height="22" HorizontalAlignment="Left" Margin="101,357,0,0" Name="textBox1" VerticalAlignment="Top" Width="224" />
+        <TextBox Height="22" HorizontalAlignment="Left" Margin="101,381,0,0" Name="textBox2" Text="Instrument data:" VerticalAlignment="Top" Width="224" />
+        <TextBox Height="22" HorizontalAlignment="Left" Margin="101,405,0,0" Name="textBox3" Text="Test method:" VerticalAlignment="Top" Width="224" />
+        <TextBox Height="22" HorizontalAlignment="Left" Margin="101,429,0,0" Name="textBox4" Text="Note:" VerticalAlignment="Top" Width="224" />
+        <TextBox Height="22" HorizontalAlignment="Left" Margin="373,357,0,0" Name="textBox5" Text="Oil from machine, degassed" VerticalAlignment="Top" Width="284" />
+        <TextBox Height="22" HorizontalAlignment="Left" Margin="373,381,0,0" Name="textBox6" Text="TOGA GC, full vacuum degassing, Energy Support" VerticalAlignment="Top" Width="284" />
+        <TextBox Height="22" HorizontalAlignment="Left" Margin="373,405,0,0" Name="textBox7" Text="HRN EN 60567, IEC 60599, IEC 61181" VerticalAlignment="Top" Width="284" />
+        <TextBox Height="22" HorizontalAlignment="Left" Margin="373,429,0,0" Name="textBox8"  VerticalAlignment="Top" Width="284" />
+        <Button Content="Otvori" Height="23" HorizontalAlignment="Left" Margin="323,89,0,0" Name="button2" VerticalAlignment="Top" Width="75" Click="button2_Click" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="80,89,0,0" Name="textBox9" VerticalAlignment="Top" Width="224" />
+        <ComboBox  Height="23" HorizontalAlignment="Left" Margin="484,89,0,0" Name="comboBox1" VerticalAlignment="Top" Width="180" IsSynchronizedWithCurrentItem="True" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="80,38,0,0" Visibility="Hidden" Text="{Binding ElementName=comboBox1, Path=Text}" TextChanged="comboT_TextChanged" Name="comboT" VerticalAlignment="Top" Width="224" />
+        <Button Content="Dodaj" Height="23" HorizontalAlignment="Left" Margin="670,129,0,0" Name="button3" VerticalAlignment="Top" Width="75" Click="button3_Click" />
+        <Button Content="Briši" Height="23" HorizontalAlignment="Left" Margin="670,89,0,0" Name="button4" VerticalAlignment="Top" Width="75" Click="button4_Click" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="544,129,0,0" Name="textBox10" VerticalAlignment="Top" Width="120" />
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="123,56,0,0" Name="textBlock1" Text="Odabir PDF-a:" FontSize="18" FontWeight="Bold" VerticalAlignment="Top" />
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="503,56,0,0" Name="textBlock2" Text="Odabir predloška:" FontSize="18" FontWeight="Bold" VerticalAlignment="Top" />
+        <TextBox  HorizontalAlignment="Left" Text="TEST REPORT" Margin="340,219,0,0" Name="textBox11" VerticalAlignment="Top" FontSize="18" FontWeight="Bold" />
+        <TextBox  HorizontalAlignment="Left" Margin="306,253,0,0" Name="textBox12" Text="No." VerticalAlignment="Top"  />
+        <TextBox  HorizontalAlignment="Left" Margin="306,277,0,0" Name="textBox13" VerticalAlignment="Top" Text="Date:" />
+        <!--<TextBox Height="23" HorizontalAlignment="Left" Margin="353,253,0,0" Name="textBox14" VerticalAlignment="Top" Width="120" />-->
+            <TextBox Height="23" HorizontalAlignment="Left" Margin="353,252,0,0" Name="textBox15a" VerticalAlignment="Top" Width="120" />
+            <TextBox Height="23" HorizontalAlignment="Left" Margin="353,277,0,0" Name="textBox15" VerticalAlignment="Top" Width="120" />
+        <Rectangle Height="148" HorizontalAlignment="Left" Margin="69,318,0,0" Name="rectangle1" Stroke="Black" VerticalAlignment="Top" Width="697" />
+        <Rectangle Height="111" HorizontalAlignment="Left" Margin="69,200,0,0" Name="rectangle2" Stroke="Black" VerticalAlignment="Top" Width="200" />
+        <Rectangle Height="111" HorizontalAlignment="Left" Margin="268,200,0,0" Name="rectangle3" Stroke="Black" VerticalAlignment="Top" Width="299" />
+        <Rectangle Height="111" HorizontalAlignment="Left" Margin="566,200,0,0" Name="rectangle4" Stroke="Black" VerticalAlignment="Top" Width="200" />
+        <TextBox  HorizontalAlignment="Left" Text="CHROMATOGRAPHIC ANALYSIS OF GASES DISSOLVED IN OIL" Margin="100,325,0,0" Name="textBox16" VerticalAlignment="Top" FontSize="18" FontWeight="Bold" />
+<TextBox  HorizontalAlignment="Left" Text="FID channel: [μV]" Margin="100,470,0,0" Name="textBox17" VerticalAlignment="Top" FontWeight="Bold" />
+<TextBox  HorizontalAlignment="Left" Text="Time: [min]" Margin="100,550,0,0" Name="textBox18" VerticalAlignment="Top" FontWeight="Bold" />
+        <TextBox  HorizontalAlignment="Left" Text="TCD channel: [μV]" Margin="100,580,0,0" Name="textBox19" VerticalAlignment="Top" FontWeight="Bold" />
+        <TextBox  HorizontalAlignment="Left" Text="Time: [min]" Margin="100,660,0,0" Name="textBox20" VerticalAlignment="Top" FontWeight="Bold" />
+        <TextBox  HorizontalAlignment="Left" Text="Component" Margin="100,690,0,0" Name="textBox21" VerticalAlignment="Top" FontWeight="Bold" />
+        <TextBox  HorizontalAlignment="Left" Text="Ref. value" Margin="200,690,0,0" Name="textBox22" VerticalAlignment="Top" FontWeight="Bold" />
+        <TextBox  HorizontalAlignment="Left" Text="Meas. value" Margin="300,690,0,0" Name="textBox23" VerticalAlignment="Top" FontWeight="Bold" />
+        <TextBox  HorizontalAlignment="Left" Text="Nom. value" Margin="400,690,0,0" Name="textBox24" VerticalAlignment="Top" FontWeight="Bold" />
+        <TextBox  HorizontalAlignment="Left" Text="Trend" Margin="500,690,0,0" Name="textBox25" VerticalAlignment="Top" FontWeight="Bold" />
+        <TextBox  HorizontalAlignment="Left" Text="Exceed. nom. val." Margin="600,690,0,0" Name="textBox26" VerticalAlignment="Top" FontWeight="Bold" />
+        <TextBox  HorizontalAlignment="Left" Text="ppm" Margin="200,710,0,0" Name="textBox27" VerticalAlignment="Top" FontWeight="Bold" />
+        <TextBox  HorizontalAlignment="Left" Text="ppm" Margin="300,710,0,0" Name="textBox28" VerticalAlignment="Top" FontWeight="Bold" />
+        <TextBox  HorizontalAlignment="Left" Text="ppm" Margin="400,710,0,0" Name="textBox29" VerticalAlignment="Top" FontWeight="Bold" />
+        <TextBox  HorizontalAlignment="Left" Text="ml/day" Margin="500,710,0,0" Name="textBox30" VerticalAlignment="Top" FontWeight="Bold" />
+        <TextBox  HorizontalAlignment="Left" Text="%" Margin="600,710,0,0" Name="textBox31" VerticalAlignment="Top" FontWeight="Bold" />
+        <TextBox  HorizontalAlignment="Left" Text="Hydrogen" Margin="100,730,0,0" Name="textBox32" VerticalAlignment="Top"  />
+        <TextBox  HorizontalAlignment="Left" Text="Methane" Margin="100,750,0,0" Name="textBox33" VerticalAlignment="Top"  />
+        <TextBox  HorizontalAlignment="Left" Text="Ethine" Margin="100,770,0,0" Name="textBox34" VerticalAlignment="Top"  />
+        <TextBox  HorizontalAlignment="Left" Text="Ethene" Margin="100,790,0,0" Name="textBox35" VerticalAlignment="Top"  />
+        <TextBox  HorizontalAlignment="Left" Text="Ethane" Margin="100,810,0,0" Name="textBox36" VerticalAlignment="Top"  />
+        <TextBox  HorizontalAlignment="Left" Text="Carbon monoxide" Margin="100,830,0,0" Name="textBox37" VerticalAlignment="Top"  />
+        <TextBox  HorizontalAlignment="Left" Text="Carbon dioxide" Margin="100,850,0,0" Name="textBox38" VerticalAlignment="Top"  />
+        <TextBox  HorizontalAlignment="Left" Text="Nitrogen" Margin="100,870,0,0" Name="textBox39" VerticalAlignment="Top"  />
+        <TextBox  HorizontalAlignment="Left" Text="Oxygen" Margin="100,890,0,0" Name="textBox40" VerticalAlignment="Top"  />
+        <TextBox  HorizontalAlignment="Left" Text="Total gas" Margin="100,910,0,0" Name="textBox41" VerticalAlignment="Top"  />
+        <TextBox FontWeight="Bold" HorizontalAlignment="Left" Margin="100,945,0,0" Name="textBox42" Text="INTERPRETATION OF TEST RESULTS: All gas concentrations are low and" VerticalAlignment="Top" />
+        <TextBox FontWeight="Bold" HorizontalAlignment="Left" Margin="100,965,0,0" Name="textBox43" Text="according with typical manufacturer's gas valuec acc. QA-RU-15-00-06" VerticalAlignment="Top" />
+        <TextBox  HorizontalAlignment="Left" Text="Tested by:" Margin="100,995,0,0" Name="textBox44" VerticalAlignment="Top"  />
+        <TextBox  HorizontalAlignment="Left" Text="Approved by:" Margin="379,995,0,0" Name="textBox45" VerticalAlignment="Top"  />
+            <TextBox  HorizontalAlignment="Left" Text="Ivanka Radić, MSc.Chem.E." Margin="192,995,0,0" Name="textBox48" VerticalAlignment="Top"  />
+            <TextBox  HorizontalAlignment="Left" Text="Vlatka Matun, mag.ing.oecoing." Margin="191,1018,0,0" Name="textBox49" VerticalAlignment="Top"  />
+            <TextBox  HorizontalAlignment="Left" Text="Renata Jurišić, MSc.Chem.E." Margin="498,995,0,0" Name="textBox50" VerticalAlignment="Top"  />
+
+            <TextBox  HorizontalAlignment="Left" FontSize="9" Text="Končar Distribution&amp;Special Transformers, tel. + 385 1 3783 777, fax:+ 0385 1 3794 051, e-mail: info@koncar-dst.hr, www.koncar-dst.hr" Margin="100,1045,0,0" Name="textBox46" VerticalAlignment="Top"  />
+        <TextBox  HorizontalAlignment="Left" FontSize="9" Text="Laboratory of Incoming control, tel.+385 1 3783 829, e-mail:ivanka.radic@koncar-dst.hr" Margin="100,1065,0,0" Name="textBox47" VerticalAlignment="Top"  />
+        <Rectangle Height="524" HorizontalAlignment="Left" Margin="69,465,0,0" Name="rectangle5" Stroke="Black" VerticalAlignment="Top" Width="697" />
+        <Rectangle Height="107" HorizontalAlignment="Left" Margin="69,988,0,0" Name="rectangle6" Stroke="Black" VerticalAlignment="Top" Width="697" />
+            <TextBox  HorizontalAlignment="Left"  Margin="200,731,0,0" Name="Polje1" VerticalAlignment="Top"  />
+            <TextBox  HorizontalAlignment="Left"  Margin="200,751,0,0" Name="Polje2" VerticalAlignment="Top"  />
+            <TextBox  HorizontalAlignment="Left"  Margin="200,771,0,0" Name="Polje3" VerticalAlignment="Top"  />
+            <TextBox  HorizontalAlignment="Left"  Margin="200,791,0,0" Name="Polje4" VerticalAlignment="Top"  />
+            <TextBox  HorizontalAlignment="Left"  Margin="200,811,0,0" Name="Polje5" VerticalAlignment="Top"  />
+            <TextBox  HorizontalAlignment="Left"  Margin="200,831,0,0" Name="Polje6" VerticalAlignment="Top"  />
+            <TextBox  HorizontalAlignment="Left"  Margin="200,851,0,0" Name="Polje7" VerticalAlignment="Top"  />
+            <TextBox  HorizontalAlignment="Left"  Margin="200,871,0,0" Name="Polje8" VerticalAlignment="Top"  />
+            <TextBox  HorizontalAlignment="Left"  Margin="200,890,0,0" Name="Polje9" VerticalAlignment="Top"  />
+            <TextBox  HorizontalAlignment="Left"  Margin="200,910,0,0" Name="Polje10" VerticalAlignment="Top"  />
+            <TextBox HorizontalAlignment="Left" Margin="300,731,0,0" Name="Polje11" VerticalAlignment="Top" />
+            <TextBox HorizontalAlignment="Left" Margin="300,751,0,0" Name="Polje12" VerticalAlignment="Top" />
+            <TextBox HorizontalAlignment="Left" Margin="300,771,0,0" Name="Polje13" VerticalAlignment="Top" />
+            <TextBox HorizontalAlignment="Left" Margin="300,791,0,0" Name="Polje14" VerticalAlignment="Top" />
+            <TextBox HorizontalAlignment="Left" Margin="300,811,0,0" Name="Polje15" VerticalAlignment="Top" />
+            <TextBox HorizontalAlignment="Left" Margin="300,831,0,0" Name="Polje16" VerticalAlignment="Top" />
+            <TextBox HorizontalAlignment="Left" Margin="300,851,0,0" Name="Polje17" VerticalAlignment="Top" />
+            <TextBox HorizontalAlignment="Left" Margin="300,871,0,0" Name="Polje18" VerticalAlignment="Top" />
+            <TextBox HorizontalAlignment="Left" Margin="300,890,0,0" Name="Polje19" VerticalAlignment="Top" />
+            <TextBox HorizontalAlignment="Left" Margin="300,910,0,0" Name="Polje20" VerticalAlignment="Top" />
+            <TextBox HorizontalAlignment="Left" Margin="400,730,0,0" Name="Polje21" VerticalAlignment="Top" />
+            <TextBox HorizontalAlignment="Left" Margin="400,750,0,0" Name="Polje22" VerticalAlignment="Top" />
+            <TextBox HorizontalAlignment="Left" Margin="400,770,0,0" Name="Polje23" VerticalAlignment="Top" />
+            <TextBox HorizontalAlignment="Left" Margin="400,790,0,0" Name="Polje24" VerticalAlignment="Top" />
+            <TextBox HorizontalAlignment="Left" Margin="400,810,0,0" Name="Polje25" VerticalAlignment="Top" />
+            <TextBox HorizontalAlignment="Left" Margin="400,830,0,0" Name="Polje26" VerticalAlignment="Top" />
+            <TextBox HorizontalAlignment="Left" Margin="400,850,0,0" Name="Polje27" VerticalAlignment="Top" />
+            <TextBox HorizontalAlignment="Left" Margin="400,870,0,0" Name="Polje28" VerticalAlignment="Top" />
+            <TextBox HorizontalAlignment="Left" Margin="400,889,0,0" Name="Polje29" VerticalAlignment="Top" />
+            <TextBox HorizontalAlignment="Left" Margin="400,909,0,0" Name="Polje30" VerticalAlignment="Top" />
+            <TextBox HorizontalAlignment="Left" Margin="500,731,0,0" Name="Polje31" VerticalAlignment="Top" />
+            <TextBox HorizontalAlignment="Left" Margin="500,751,0,0" Name="Polje32" VerticalAlignment="Top" />
+            <TextBox HorizontalAlignment="Left" Margin="500,771,0,0" Name="Polje33" VerticalAlignment="Top" />
+            <TextBox HorizontalAlignment="Left" Margin="500,791,0,0" Name="Polje34" VerticalAlignment="Top" />
+            <TextBox HorizontalAlignment="Left" Margin="500,811,0,0" Name="Polje35" VerticalAlignment="Top" />
+            <TextBox HorizontalAlignment="Left" Margin="500,831,0,0" Name="Polje36" VerticalAlignment="Top" />
+            <TextBox HorizontalAlignment="Left" Margin="500,851,0,0" Name="Polje37" VerticalAlignment="Top" />
+            <TextBox HorizontalAlignment="Left" Margin="500,871,0,0" Name="Polje38" VerticalAlignment="Top" />
+            <TextBox HorizontalAlignment="Left" Margin="500,890,0,0" Name="Polje39" VerticalAlignment="Top" />
+            <TextBox HorizontalAlignment="Left" Margin="500,910,0,0" Name="Polje40" VerticalAlignment="Top" />
+            <TextBox HorizontalAlignment="Left" Margin="600,730,0,0" Name="Polje41" VerticalAlignment="Top" />
+            <TextBox HorizontalAlignment="Left" Margin="600,750,0,0" Name="Polje42" VerticalAlignment="Top" />
+            <TextBox HorizontalAlignment="Left" Margin="600,770,0,0" Name="Polje43" VerticalAlignment="Top" />
+            <TextBox HorizontalAlignment="Left" Margin="600,790,0,0" Name="Polje44" VerticalAlignment="Top" />
+            <TextBox HorizontalAlignment="Left" Margin="600,810,0,0" Name="Polje45" VerticalAlignment="Top" />
+            <TextBox HorizontalAlignment="Left" Margin="600,830,0,0" Name="Polje46" VerticalAlignment="Top" />
+            <TextBox HorizontalAlignment="Left" Margin="600,850,0,0" Name="Polje47" VerticalAlignment="Top" />
+            <TextBox HorizontalAlignment="Left" Margin="600,870,0,0" Name="Polje48" VerticalAlignment="Top" />
+            <TextBox HorizontalAlignment="Left" Margin="600,889,0,0" Name="Polje49" VerticalAlignment="Top" />
+            <TextBox HorizontalAlignment="Left" Margin="600,909,0,0" Name="Polje50" VerticalAlignment="Top" />
+        </Grid>
+    </ScrollViewer>
+</Window>
