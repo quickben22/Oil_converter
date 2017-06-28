@@ -35,7 +35,7 @@ namespace Wpf_pdf_3
 
         }
 
-        private void nesto(string[] popis2, string[] popis3)
+        private void nesto(string[] popis2, string[] popis3,int pomak=0)
         {
 
 
@@ -56,47 +56,47 @@ namespace Wpf_pdf_3
             XFont font1b = new XFont("Arial", 10.5, XFontStyle.Bold, options);
             XFont font1c = new XFont("Arial", 11, XFontStyle.Bold, options);
             XFont font2 = new XFont("Arial", 14, XFontStyle.Bold, options);
-            XFont font3 = new XFont("Arial", 20, XFontStyle.Bold, options);
+            XFont font3 = new XFont("Arial", pretvori(textBox11a.Text), XFontStyle.Bold, options);
             XFont font4 = new XFont("Arial", 12, XFontStyle.Bold, options);
             XFont font5 = new XFont("Arial", 8, XFontStyle.Regular, options);
 
             gfx.DrawRectangle(XBrushes.White, new XRect(78, 100, 450, 35));
             Size zz = MeasureString(popis2[8], new FontFamily("Arial"), FontStyles.Normal, FontWeights.Bold, FontStretches.Normal, font2.Size);
             gfx.DrawString(popis2[8], font2, XBrushes.Black, new XRect(86-(zz.Width-455)/3, 109, 0, 20), XStringFormats.TopLeft);
-            gfx.DrawRectangle(XBrushes.White, new XRect(78, 136, 150, 12));
-            gfx.DrawString(popis2[0], font1, XBrushes.Black, new XRect(96, 136, 0, 20), XStringFormats.TopLeft);
+            gfx.DrawRectangle(XBrushes.White, new XRect(78, 136 , 150, 12 ));
+            gfx.DrawString(popis2[0], font1, XBrushes.Black, new XRect(96, 136 , 0, 20 ), XStringFormats.TopLeft);
             if (popis2[4].Length > 0)
             {
-                gfx.DrawRectangle(XBrushes.White, new XRect(230, 136, 300, 12));
-                gfx.DrawString(popis2[4], font1, XBrushes.Black, new XRect(238, 137, 0, 20), XStringFormats.TopLeft);
+                gfx.DrawRectangle(XBrushes.White, new XRect(230, 136 + pomak, 300, 12 ));
+                gfx.DrawString(popis2[4], font1, XBrushes.Black, new XRect(238, 137 + pomak, 0, 20 ), XStringFormats.TopLeft);
             }
-            gfx.DrawRectangle(XBrushes.White, new XRect(78, 152, 150, 12));
-            gfx.DrawString(popis2[1], font1, XBrushes.Black, new XRect(96, 151, 0, 20), XStringFormats.TopLeft);
+            gfx.DrawRectangle(XBrushes.White, new XRect(78, 152 + pomak, 150, 12 ));
+            gfx.DrawString(popis2[1], font1, XBrushes.Black, new XRect(96, 151 + pomak, 0, 20 ), XStringFormats.TopLeft);
             if (popis2[5].Length > 0)
             {
-                gfx.DrawRectangle(XBrushes.White, new XRect(230, 152, 300, 12));
-                gfx.DrawString(popis2[5], font1, XBrushes.Black, new XRect(238, 152, 0, 20), XStringFormats.TopLeft);
+                gfx.DrawRectangle(XBrushes.White, new XRect(230, 152+pomak, 300, 12));
+                gfx.DrawString(popis2[5], font1, XBrushes.Black, new XRect(238, 152+pomak, 0, 20), XStringFormats.TopLeft);
             }
-            gfx.DrawRectangle(XBrushes.White, new XRect(78, 167, 150, 12));
-            gfx.DrawString(popis2[2], font1, XBrushes.Black, new XRect(96, 166, 0, 20), XStringFormats.TopLeft);
+            gfx.DrawRectangle(XBrushes.White, new XRect(78, 167+pomak, 150, 12));
+            gfx.DrawString(popis2[2], font1, XBrushes.Black, new XRect(96, 166+pomak, 0, 20), XStringFormats.TopLeft);
             if (popis2[6].Length > 0)
             {
-                gfx.DrawRectangle(XBrushes.White, new XRect(230, 167, 300, 12));
-                gfx.DrawString(popis2[6], font1, XBrushes.Black, new XRect(238, 167, 0, 20), XStringFormats.TopLeft);
+                gfx.DrawRectangle(XBrushes.White, new XRect(230, 167+pomak, 300, 12));
+                gfx.DrawString(popis2[6], font1, XBrushes.Black, new XRect(238, 167+pomak, 0, 20), XStringFormats.TopLeft);
             }
-            gfx.DrawRectangle(XBrushes.White, new XRect(78, 182, 150, 12));
-            gfx.DrawString(popis2[3], font1, XBrushes.Black, new XRect(96, 181, 0, 20), XStringFormats.TopLeft);
+            gfx.DrawRectangle(XBrushes.White, new XRect(78, 182 + pomak, 150, 12));
+            gfx.DrawString(popis2[3], font1, XBrushes.Black, new XRect(96, 181 + pomak, 0, 20), XStringFormats.TopLeft);
             if (popis2[7].Length > 0)
             {
-                gfx.DrawRectangle(XBrushes.White, new XRect(230, 182, 300, 12));
-                gfx.DrawString(popis2[7], font1, XBrushes.Black, new XRect(238, 182, 0, 20), XStringFormats.TopLeft);
+                gfx.DrawRectangle(XBrushes.White, new XRect(230, 182 + pomak, 300, 12));
+                gfx.DrawString(popis2[7], font1, XBrushes.Black, new XRect(238, 182 + pomak, 0, 20), XStringFormats.TopLeft);
             }
-            gfx.DrawRectangle(XBrushes.White, new XRect(228, 20, 200, 30));
+            gfx.DrawRectangle(XBrushes.White, new XRect(228, 15, 200, 23));
 
 
              zz = MeasureString(popis2[9], new FontFamily("Arial"), FontStyles.Normal, FontWeights.Bold, FontStretches.Normal, font3.Size);
-            gfx.DrawString(popis2[9], font3, XBrushes.Black, new XRect(254-(zz.Width-141)/2, 30, 0, 20), XStringFormats.TopLeft);
-            gfx.DrawRectangle(XBrushes.White, new XRect(228, 50, 25, 20));
+            gfx.DrawString(popis2[9], font3, XBrushes.Black, new XRect(254-(zz.Width-141)/2, 17, 0, 20), XStringFormats.TopLeft);
+            gfx.DrawRectangle(XBrushes.White, new XRect(228, 53, 25, 25));
             gfx.DrawString(popis2[10], font1, XBrushes.Black, new XRect(233, 60, 0, 20), XStringFormats.TopLeft);
             gfx.DrawRectangle(XBrushes.White, new XRect(228, 70, 30, 17));
             gfx.DrawString(popis2[11], font1, XBrushes.Black, new XRect(233, 75, 0, 20), XStringFormats.TopLeft);
@@ -111,76 +111,76 @@ namespace Wpf_pdf_3
                 gfx.DrawString(popis2[12], font1, XBrushes.Black, new XRect(294, 75, 0, 20), XStringFormats.TopLeft);
             }
            
-            gfx.DrawRectangle(XBrushes.White, new XRect(96, 206, 80, 12));
-            gfx.DrawString(popis2[13], fontb, XBrushes.Black, new XRect(96, 206, 0, 20), XStringFormats.TopLeft);
-            gfx.DrawRectangle(XBrushes.White, new XRect(96, 336, 80, 12));
-            gfx.DrawString(popis2[14], fontb, XBrushes.Black, new XRect(96, 336, 0, 20), XStringFormats.TopLeft);
-            gfx.DrawRectangle(XBrushes.White, new XRect(96, 362, 85, 12));
-            gfx.DrawString(popis2[15], fontb, XBrushes.Black, new XRect(96, 362, 0, 20), XStringFormats.TopLeft);
-            gfx.DrawRectangle(XBrushes.White, new XRect(96, 491, 80, 12));
-            gfx.DrawString(popis2[16], fontb, XBrushes.Black, new XRect(96, 492, 0, 20), XStringFormats.TopLeft);
+            gfx.DrawRectangle(XBrushes.White, new XRect(96, 206+pomak, 80, 12));
+            gfx.DrawString(popis2[13], fontb, XBrushes.Black, new XRect(96, 206 + pomak, 0, 20), XStringFormats.TopLeft);
+            gfx.DrawRectangle(XBrushes.White, new XRect(96, 336 + pomak, 80, 12));
+            gfx.DrawString(popis2[14], fontb, XBrushes.Black, new XRect(96, 336 + pomak, 0, 20), XStringFormats.TopLeft);
+            gfx.DrawRectangle(XBrushes.White, new XRect(96, 362 + pomak, 85, 12));
+            gfx.DrawString(popis2[15], fontb, XBrushes.Black, new XRect(96, 362 + pomak, 0, 20), XStringFormats.TopLeft);
+            gfx.DrawRectangle(XBrushes.White, new XRect(96, 491 + pomak, 80, 12));
+            gfx.DrawString(popis2[16], fontb, XBrushes.Black, new XRect(96, 492 + pomak, 0, 20), XStringFormats.TopLeft);
 
-            gfx.DrawRectangle(XBrushes.White, new XRect(98, 525, 80, 11));
-            gfx.DrawString(popis2[17], font1b, XBrushes.Black, new XRect(96, 525, 0, 20), XStringFormats.TopLeft);
+            gfx.DrawRectangle(XBrushes.White, new XRect(98, 525 + pomak, 80, 11));
+            gfx.DrawString(popis2[17], font1b, XBrushes.Black, new XRect(96, 525 + pomak, 0, 20), XStringFormats.TopLeft);
 
-            gfx.DrawRectangle(XBrushes.White, new XRect(220, 525, 55, 11));
-            gfx.DrawString(popis2[18], font1b, XBrushes.Black, new XRect(218, 525, 0, 20), XStringFormats.TopLeft);
-            gfx.DrawRectangle(XBrushes.White, new XRect(287, 525, 60, 11));
-            gfx.DrawString(popis2[19], font1b, XBrushes.Black, new XRect(285, 525, 0, 20), XStringFormats.TopLeft);
-            gfx.DrawRectangle(XBrushes.White, new XRect(351, 525, 60, 11));
-            gfx.DrawString(popis2[20], font1b, XBrushes.Black, new XRect(353, 525, 0, 20), XStringFormats.TopLeft);
-            gfx.DrawRectangle(XBrushes.White, new XRect(415, 525, 85, 11));
-            gfx.DrawString(popis2[21], font1b, XBrushes.Black, new XRect(414, 525, 0, 20), XStringFormats.TopLeft);
-            gfx.DrawRectangle(XBrushes.White, new XRect(504, 525, 55, 11));
-            gfx.DrawString(popis2[22], font1b, XBrushes.Black, new XRect(505, 525, 0, 20), XStringFormats.TopLeft);
+            gfx.DrawRectangle(XBrushes.White, new XRect(220, 525 + pomak, 55, 11));
+            gfx.DrawString(popis2[18], font1b, XBrushes.Black, new XRect(218, 525 + pomak, 0, 20), XStringFormats.TopLeft);
+            gfx.DrawRectangle(XBrushes.White, new XRect(287, 525 + pomak, 60, 11));
+            gfx.DrawString(popis2[19], font1b, XBrushes.Black, new XRect(285, 525 + pomak, 0, 20), XStringFormats.TopLeft);
+            gfx.DrawRectangle(XBrushes.White, new XRect(351, 525 + pomak, 60, 11));
+            gfx.DrawString(popis2[20], font1b, XBrushes.Black, new XRect(353, 525 + pomak, 0, 20), XStringFormats.TopLeft);
+            gfx.DrawRectangle(XBrushes.White, new XRect(415, 525 + pomak, 85, 11));
+            gfx.DrawString(popis2[21], font1b, XBrushes.Black, new XRect(414, 525 + pomak, 0, 20), XStringFormats.TopLeft);
+            gfx.DrawRectangle(XBrushes.White, new XRect(504, 525 + pomak, 55, 11));
+            gfx.DrawString(popis2[22], font1b, XBrushes.Black, new XRect(505, 525 + pomak, 0, 20), XStringFormats.TopLeft);
 
-            gfx.DrawRectangle(XBrushes.White, new XRect(220, 536, 55, 11));
-            gfx.DrawString(popis2[23], font1b, XBrushes.Black, new XRect(245, 536, 0, 20), XStringFormats.TopCenter);
-            gfx.DrawRectangle(XBrushes.White, new XRect(287, 536, 60, 11));
-            gfx.DrawString(popis2[24], font1b, XBrushes.Black, new XRect(316, 536, 0, 20), XStringFormats.TopCenter);
-            gfx.DrawRectangle(XBrushes.White, new XRect(351, 536, 60, 11));
-            gfx.DrawString(popis2[25], font1b, XBrushes.Black, new XRect(380, 536, 0, 20), XStringFormats.TopCenter);
-            gfx.DrawRectangle(XBrushes.White, new XRect(415, 536, 85, 11));
-            gfx.DrawString(popis2[26], font1b, XBrushes.Black, new XRect(455, 536, 0, 20), XStringFormats.TopCenter);
-            gfx.DrawRectangle(XBrushes.White, new XRect(504, 536, 55, 11));
-            gfx.DrawString(popis2[27], font1b, XBrushes.Black, new XRect(505, 536, 0, 20), XStringFormats.TopCenter);
+            gfx.DrawRectangle(XBrushes.White, new XRect(220, 536 + pomak, 55, 11));
+            gfx.DrawString(popis2[23], font1b, XBrushes.Black, new XRect(245, 536 + pomak, 0, 20), XStringFormats.TopCenter);
+            gfx.DrawRectangle(XBrushes.White, new XRect(287, 536 + pomak, 60, 11));
+            gfx.DrawString(popis2[24], font1b, XBrushes.Black, new XRect(316, 536 + pomak, 0, 20), XStringFormats.TopCenter);
+            gfx.DrawRectangle(XBrushes.White, new XRect(351, 536 + pomak, 60, 11));
+            gfx.DrawString(popis2[25], font1b, XBrushes.Black, new XRect(380, 536 + pomak, 0, 20), XStringFormats.TopCenter);
+            gfx.DrawRectangle(XBrushes.White, new XRect(415, 536 + pomak, 85, 11));
+            gfx.DrawString(popis2[26], font1b, XBrushes.Black, new XRect(455, 536 + pomak, 0, 20), XStringFormats.TopCenter);
+            gfx.DrawRectangle(XBrushes.White, new XRect(504, 536 + pomak, 55, 11));
+            gfx.DrawString(popis2[27], font1b, XBrushes.Black, new XRect(505, 536 + pomak, 0, 20), XStringFormats.TopCenter);
 
-            gfx.DrawRectangle(XBrushes.White, new XRect(98, 551, 70, 11));
-            gfx.DrawString(popis2[28], font1, XBrushes.Black, new XRect(98, 551, 0, 20), XStringFormats.TopLeft);
-            gfx.DrawRectangle(XBrushes.White, new XRect(98, 566, 70, 11));
-            gfx.DrawString(popis2[29], font1, XBrushes.Black, new XRect(98, 566, 0, 20), XStringFormats.TopLeft);
-            gfx.DrawRectangle(XBrushes.White, new XRect(98, 583, 70, 11));
-            gfx.DrawString(popis2[30], font1, XBrushes.Black, new XRect(98, 583, 0, 20), XStringFormats.TopLeft);
-            gfx.DrawRectangle(XBrushes.White, new XRect(98, 598, 70, 11));
-            gfx.DrawString(popis2[31], font1, XBrushes.Black, new XRect(98, 598, 0, 20), XStringFormats.TopLeft);
-            gfx.DrawRectangle(XBrushes.White, new XRect(98, 614, 70, 11));
-            gfx.DrawString(popis2[32], font1, XBrushes.Black, new XRect(98, 614, 0, 20), XStringFormats.TopLeft);
-            gfx.DrawRectangle(XBrushes.White, new XRect(98, 629, 80, 11));
-            gfx.DrawString(popis2[33], font1, XBrushes.Black, new XRect(98, 630, 0, 20), XStringFormats.TopLeft);
-            gfx.DrawRectangle(XBrushes.White, new XRect(98, 644, 75, 11));
-            gfx.DrawString(popis2[34], font1, XBrushes.Black, new XRect(98, 646, 0, 20), XStringFormats.TopLeft);
-            gfx.DrawRectangle(XBrushes.White, new XRect(98, 661, 70, 11));
-            gfx.DrawString(popis2[35], font1, XBrushes.Black, new XRect(98, 661, 0, 20), XStringFormats.TopLeft);
-            gfx.DrawRectangle(XBrushes.White, new XRect(98, 676, 70, 11));
-            gfx.DrawString(popis2[36], font1, XBrushes.Black, new XRect(98, 676, 0, 20), XStringFormats.TopLeft);
-            gfx.DrawRectangle(XBrushes.White, new XRect(98, 691, 70, 11));
+            gfx.DrawRectangle(XBrushes.White, new XRect(98, 551 + pomak, 70, 11));
+            gfx.DrawString(popis2[28], font1, XBrushes.Black, new XRect(98, 551 + pomak, 0, 20), XStringFormats.TopLeft);
+            gfx.DrawRectangle(XBrushes.White, new XRect(98, 566 + pomak, 70, 11));
+            gfx.DrawString(popis2[29], font1, XBrushes.Black, new XRect(98, 566 + pomak, 0, 20), XStringFormats.TopLeft);
+            gfx.DrawRectangle(XBrushes.White, new XRect(98, 583 + pomak, 70, 11));
+            gfx.DrawString(popis2[30], font1, XBrushes.Black, new XRect(98, 583 + pomak, 0, 20), XStringFormats.TopLeft);
+            gfx.DrawRectangle(XBrushes.White, new XRect(98, 598 + pomak, 70, 11));
+            gfx.DrawString(popis2[31], font1, XBrushes.Black, new XRect(98, 598 + pomak, 0, 20), XStringFormats.TopLeft);
+            gfx.DrawRectangle(XBrushes.White, new XRect(98, 614 + pomak, 70, 11));
+            gfx.DrawString(popis2[32], font1, XBrushes.Black, new XRect(98, 614 + pomak, 0, 20), XStringFormats.TopLeft);
+            gfx.DrawRectangle(XBrushes.White, new XRect(98, 629 + pomak, 80, 11));
+            gfx.DrawString(popis2[33], font1, XBrushes.Black, new XRect(98, 630 + pomak, 0, 20), XStringFormats.TopLeft);
+            gfx.DrawRectangle(XBrushes.White, new XRect(98, 644 + pomak, 75, 11));
+            gfx.DrawString(popis2[34], font1, XBrushes.Black, new XRect(98, 646 + pomak, 0, 20), XStringFormats.TopLeft);
+            gfx.DrawRectangle(XBrushes.White, new XRect(98, 661 + pomak, 70, 11));
+            gfx.DrawString(popis2[35], font1, XBrushes.Black, new XRect(98, 661 + pomak, 0, 20), XStringFormats.TopLeft);
+            gfx.DrawRectangle(XBrushes.White, new XRect(98, 676 + pomak, 70, 11));
+            gfx.DrawString(popis2[36], font1, XBrushes.Black, new XRect(98, 676 + pomak, 0, 20), XStringFormats.TopLeft);
+            gfx.DrawRectangle(XBrushes.White, new XRect(98, 691 + pomak, 70, 11));
             //Console.WriteLine(popis2[37].Length);
-            gfx.DrawString(popis2[37], font1, XBrushes.Black, new XRect(98, 691, 0, 20), XStringFormats.TopLeft);
+            gfx.DrawString(popis2[37], font1, XBrushes.Black, new XRect(98, 691 + pomak, 0, 20), XStringFormats.TopLeft);
 
-            gfx.DrawRectangle(XBrushes.White, new XRect(78, 733, 450, 15));
-            gfx.DrawString(popis2[38], font4, XBrushes.Black, new XRect(78, 733, 0, 20), XStringFormats.TopLeft);
-            gfx.DrawRectangle(XBrushes.White, new XRect(78, 748, 450, 13));
-            gfx.DrawString(popis2[39], font4, XBrushes.Black, new XRect(78, 748, 0, 20), XStringFormats.TopLeft);
+            gfx.DrawRectangle(XBrushes.White, new XRect(78, 733 , 450, 15));
+            gfx.DrawString(popis2[38], font4, XBrushes.Black, new XRect(78, 733 , 0, 20), XStringFormats.TopLeft);
+            gfx.DrawRectangle(XBrushes.White, new XRect(78, 748 , 450, 13));
+            gfx.DrawString(popis2[39], font4, XBrushes.Black, new XRect(78, 748 , 0, 20), XStringFormats.TopLeft);
 
-            gfx.DrawRectangle(XBrushes.White, new XRect(72, 779, 200, 28));
-            gfx.DrawString(popis2[40] + " " + popis2[44], font1, XBrushes.Black, new XRect(72, 779, 0, 20), XStringFormats.TopLeft);
-            gfx.DrawString(new string(' ', popis2[40].Length + 1 + 7) + popis2[45], font1, XBrushes.Black, new XRect(72, 792, 0, 20), XStringFormats.TopLeft);
-            gfx.DrawRectangle(XBrushes.White, new XRect(332, 779, 220, 13));
-            gfx.DrawString(popis2[41] + " " + popis2[46], font1, XBrushes.Black, new XRect(332, 779, 0, 20), XStringFormats.TopLeft);
-            gfx.DrawRectangle(XBrushes.White, new XRect(70, 810, 500, 9));
-            gfx.DrawString(popis2[42], font5, XBrushes.Black, new XRect(71, 810, 0, 20), XStringFormats.TopLeft);
-            gfx.DrawRectangle(XBrushes.White, new XRect(70, 819, 500, 11));
-            gfx.DrawString(popis2[43], font5, XBrushes.Black, new XRect(71, 819.5, 0, 20), XStringFormats.TopLeft);
+            gfx.DrawRectangle(XBrushes.White, new XRect(72, 779 , 200, 28));
+            gfx.DrawString(popis2[40] + " " + popis2[44], font1, XBrushes.Black, new XRect(72, 779 , 0, 20), XStringFormats.TopLeft);
+            gfx.DrawString(new string(' ', popis2[40].Length + 1 + 7) + popis2[45], font1, XBrushes.Black, new XRect(72, 792 , 0, 20), XStringFormats.TopLeft);
+            gfx.DrawRectangle(XBrushes.White, new XRect(332, 779 , 220, 13));
+            gfx.DrawString(popis2[41] + " " + popis2[46], font1, XBrushes.Black, new XRect(332, 779 , 0, 20), XStringFormats.TopLeft);
+            gfx.DrawRectangle(XBrushes.White, new XRect(70, 810 , 500, 9));
+            gfx.DrawString(popis2[42], font5, XBrushes.Black, new XRect(71, 810 , 0, 20), XStringFormats.TopLeft);
+            gfx.DrawRectangle(XBrushes.White, new XRect(70, 819 , 500, 11));
+            gfx.DrawString(popis2[43], font5, XBrushes.Black, new XRect(71, 819.5 , 0, 20), XStringFormats.TopLeft);
             //}
 
             for (int i = 0; i < popis3.Length; i++)
@@ -196,8 +196,8 @@ namespace Wpf_pdf_3
                     //else
                     //{
                     if (i >= 40) break;
-                    gfx.DrawRectangle(XBrushes.White, new XRect(220 + 67 * (i / 10), 551 + (15 * (i % 10) + (i % 10) / 4 * 3 - (i % 10) / 8), 50, 11));
-                    gfx.DrawString(popis3[i], font1, XBrushes.Black, new XRect(245 + 67 * (i / 10) + (i / 30) * 10, 551 + (15 * (i % 10) + (i % 10) / 4 * 3), 0, 20), XStringFormats.TopCenter);
+                    gfx.DrawRectangle(XBrushes.White, new XRect(220 + 67 * (i / 10), 551 + (15 * (i % 10) + (i % 10) / 4 * 3 - (i % 10) / 8) + pomak, 50, 11));
+                    gfx.DrawString(popis3[i], font1, XBrushes.Black, new XRect(245 + 67 * (i / 10) + (i / 30) * 10, 551 + (15 * (i % 10) + (i % 10) / 4 * 3) + pomak, 0, 20), XStringFormats.TopCenter);
                     //}
                 }
                 //gfx.DrawRectangle(XBrushes.White, new XRect(98, 566, 70, 11));
@@ -215,7 +215,7 @@ namespace Wpf_pdf_3
             //break;
 
             //}
-            outputText = outputText.Substring(0, outputText.IndexOf(" "));
+            outputText = outputText.Substring(0, outputText.IndexOf("Date"));
             int pom = 0;
             for (int i = 0; i < outputText.Length; i++)
             {
@@ -244,6 +244,11 @@ namespace Wpf_pdf_3
         }
 
         private void button1_Click(object sender, RoutedEventArgs e)
+        {
+            konvertiraj();
+        }
+
+        private void konvertiraj(int pomak=0)
         {
             string[] popis2 = new string[48];
             popis2[0] = textBox1.Text;
@@ -306,7 +311,7 @@ namespace Wpf_pdf_3
             if (textBox9.Text.Length > 0)
                 try
                 {
-                    nesto(popis2, popis3);
+                    nesto(popis2, popis3,pomak);
                 }
                 catch
                 {
@@ -314,7 +319,6 @@ namespace Wpf_pdf_3
                 }
             else MessageBox.Show("Potrebno odabrat PDF datoteku!");
         }
-
 
         public static IEnumerable<T> FindVisualChildren<T>(DependencyObject depObj) where T : DependencyObject
         {
@@ -573,6 +577,25 @@ namespace Wpf_pdf_3
             }
 
             return -1;
+        }
+
+        private void button1a_Click(object sender, RoutedEventArgs e)
+        {
+            konvertiraj(11);
+        }
+
+        private double pretvori(object b)
+        {
+            double rezultat;
+            string a = b.ToString();
+            bool isNum = double.TryParse(a, NumberStyles.Any, CultureInfo.InvariantCulture, out rezultat);
+
+            if (isNum)
+                rezultat = double.Parse(a.Replace(",", "."), System.Globalization.NumberStyles.Any, CultureInfo.CreateSpecificCulture("en-us"));
+            else
+                rezultat = 0;
+
+            return rezultat;
         }
 
     }

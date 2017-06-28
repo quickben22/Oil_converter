@@ -5,7 +5,8 @@
     <ScrollViewer>
     <Grid>
         <Button Content="Konvertiraj" FontSize="16" Height="43" HorizontalAlignment="Left" Margin="254,129,0,0" Name="button1" VerticalAlignment="Top" Width="144" Click="button1_Click" />
-        <TextBox Text="Transformer data:" Height="22" HorizontalAlignment="Left" Margin="101,357,0,0" Name="textBox1" VerticalAlignment="Top" Width="224" />
+            <Button Content="Dupli&#10; red"  FontSize="16" Height="53" HorizontalAlignment="Left" Margin="6,129,0,0" Name="button1a" VerticalAlignment="Top" Width="56" Click="button1a_Click" />
+            <TextBox Text="Transformer data:" Height="22" HorizontalAlignment="Left" Margin="101,357,0,0" Name="textBox1" VerticalAlignment="Top" Width="224" />
         <TextBox Height="22" HorizontalAlignment="Left" Margin="101,381,0,0" Name="textBox2" Text="Instrument data:" VerticalAlignment="Top" Width="224" />
         <TextBox Height="22" HorizontalAlignment="Left" Margin="101,405,0,0" Name="textBox3" Text="Test method:" VerticalAlignment="Top" Width="224" />
         <TextBox Height="22" HorizontalAlignment="Left" Margin="101,429,0,0" Name="textBox4" Text="Note:" VerticalAlignment="Top" Width="224" />
@@ -23,7 +24,8 @@
         <TextBlock Height="23" HorizontalAlignment="Left" Margin="123,56,0,0" Name="textBlock1" Text="Odabir PDF-a:" FontSize="18" FontWeight="Bold" VerticalAlignment="Top" />
         <TextBlock Height="23" HorizontalAlignment="Left" Margin="503,56,0,0" Name="textBlock2" Text="Odabir predloška:" FontSize="18" FontWeight="Bold" VerticalAlignment="Top" />
         <TextBox  HorizontalAlignment="Left" Text="TEST REPORT" Margin="340,219,0,0" Name="textBox11" VerticalAlignment="Top" FontSize="18" FontWeight="Bold" />
-        <TextBox  HorizontalAlignment="Left" Margin="306,253,0,0" Name="textBox12" Text="No." VerticalAlignment="Top"  />
+            <TextBox  HorizontalAlignment="Left" Text="20" Margin="500,239,0,0" Name="textBox11a" VerticalAlignment="Top" FontSize="18" FontWeight="Bold" />
+            <TextBox  HorizontalAlignment="Left" Margin="306,253,0,0" Name="textBox12" Text="No." VerticalAlignment="Top"  />
         <TextBox  HorizontalAlignment="Left" Margin="306,277,0,0" Name="textBox13" VerticalAlignment="Top" Text="Date:" />
         <!--<TextBox Height="23" HorizontalAlignment="Left" Margin="353,253,0,0" Name="textBox14" VerticalAlignment="Top" Width="120" />-->
             <TextBox Height="23" HorizontalAlignment="Left" Margin="353,252,0,0" Name="textBox15a" VerticalAlignment="Top" Width="120" />
